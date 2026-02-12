@@ -60,7 +60,7 @@ pnpm dlx shadcn@latest add button
 
 ### Path Aliases
 
-Use the `@` alias to import files from the root directory:
+Use the `@` alias to import files from the `src` directory:
 
 ```tsx
 import { cn } from "@/lib/utils";
@@ -76,12 +76,13 @@ The React Compiler is enabled in `next.config.ts`.
 ```
 ├── .github/              # GitHub Actions & Dependabot
 ├── public/               # Static assets
-├── app/                  # Next.js App Router headers
-│   ├── layout.tsx        # Root layout
-│   └── page.tsx          # Home page
-├── components/           # UI components (Shadcn & others)
-│   └── ui/               # Shadcn primitive components
-├── lib/                  # Utility functions (cn, etc.)
+├── src/                  # Application source code
+│   ├── app/              # Next.js App Router headers
+│   │   ├── layout.tsx    # Root layout
+│   │   └── page.tsx      # Home page
+│   ├── components/       # UI components (Shadcn & others)
+│   │   └── ui/           # Shadcn primitive components
+│   └── lib/              # Utility functions (cn, etc.)
 ├── components.json       # Shadcn CLI configuration
 ├── eslint.config.mjs     # ESLint configuration
 ├── next.config.ts        # Next.js configuration
